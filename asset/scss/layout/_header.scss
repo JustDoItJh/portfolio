@@ -1,0 +1,46 @@
+.header {width: 100%;}
+.head-area {
+    position: fixed;
+    top: 0; left: 0;
+    padding-top: 58px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .head-box {
+        display: flex;
+        position: relative;
+        width: 33.3333%;
+        &:nth-child(1) {padding: 10px 10px 10px 20px; justify-content: flex-start;}
+        &:nth-child(2) {padding: 10px 10px 10px 10px; justify-content: center;}
+        &:nth-child(3) {padding: 10px 20px 10px 10px; justify-content: flex-end;}
+
+        .logo {
+            font-size: 36px;
+            font-weight: 800;
+        }
+        .btn-menu {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: .2em;
+        }
+        .btn-chat {
+            position: relative;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: .2em;
+            span:hover span::after {width: 100%; transition: all .5s;}
+            span::before {
+                content: '';
+                position: absolute;
+                display: inline-block;
+                left: 0%; bottom: 10%;
+                width: 0%;
+                height: 2px;
+                background: #d5af31;
+                transition: all .5s;
+            }
+        }
+        .menu-area {display: none;}
+    }
+}
