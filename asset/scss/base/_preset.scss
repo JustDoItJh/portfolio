@@ -6,3 +6,12 @@
     clip: rect(0 0 0 0);
     margin: -1px;
 }
+
+.link-line {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 3px;
+    border-radius: 100px;
+    border: 1px solid #d5af31;
+    padding: 15px 45px;
+}
