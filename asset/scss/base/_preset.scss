@@ -14,4 +14,20 @@
     border-radius: 100px;
     border: 1px solid #d5af31;
     padding: 15px 45px;
+    transition-duration: 0.5s;
+
+    &:hover {
+        border: 1px solid #131313;
+    }
+
+    .footer &:hover {
+        background: #d5af31;
+    }
+}
+
+.link {
+    transition-duration: 0.5s;
+    &:hover {
+        color: #d5af31;
+    }
 }
