@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./asset/css/style.css">
 </head>
 <body>
+    <!-- overflow : hidden 으로 메뉴버튼 페이지 스크롤 비활성화  -->
     <div class="wrapper">
         <div class="cursor">
             <div class="cursor-follow">DRAG</div>
@@ -19,13 +20,15 @@
             <div class="head-area">
                 <div class="head-wrap">
                     <div class="head-box">
-                        <h1 class="logo"><a href="" class="link-logo">HIGHOPES</a></h1>
+                        <h1 class="logo"><a href="" class="link-logo">Jin Portfolio</a></h1>
                     </div>
                     <div class="head-box">
                         <button class="btn-menu link">MENU</button> <!-- click 시 close로 텍스트 변환 -->
+
                         <div class="menu-area">
                             <div class="menu-wrap">
-                                <div class="menu-box">
+                                <!-- wai-area : role / button -->
+                                <div class="menu-box" role="navigation">
                                     <ul class="menu-list">
                                         <li class="menu-item">
                                             <a href="" class="link-menu">WORK</a>
@@ -73,42 +76,27 @@
             </div>
         </header>
         <!-- main -->
-        <main class="main">
+        <main class="main" role="main">
             <section class="sc-intro">
                 <div class="title-wrap">
                     <h2 class="title">BE THE NEXT GREAT <br> CANNABIS BRAND</h2>
                 </div>
                 <div class="drag-area">
-                    <div class="swiper swiperFade">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <figure class="image-wrap">
-                                    slide1
-                                </figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure class="image-wrap">
-                                    slide2
-                                </figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure class="image-wrap">
-                                    slide3
-                                </figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure class="image-wrap">
-                                    slide4
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- 의미없는 비쥬얼 이미지 (비디오) -->
+                    <figure class="image-wrap">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/4277aa146086465.62a9fb106ce7c.jpg" alt="">
+                    </figure>
                 </div>
             </section>
-            <section class="sc-introDesc"> <!-- 배경색 전환 white-->
+
+            <!-- id에만 대문자 -->
+            <section class="sc-introDesc" id="intro"> <!-- 배경색 전환 white-->
+                <h2 class="blind">입사 후 포부</h2>
                 <div class="introDesc-area">
                     <div class="introDesc-inner">
-                        <span class="text">Unlock the potential of your business with <a href="" class="link-color">cannabis design and marketing</a> services built for your success.</span>
+                        <p class="text">
+                            퍼블리셔로서, 더 나아가 프론트엔드 전문가가 될 수 있도록 현재에는 충실하되 <a href="" class="link-color">항상 미래를 보는 사람이되고싶습니다.</a>
+                        </p>
                     </div>
                     <div class="introDesc-inner">
                         <a href="" class="link-line">
@@ -117,37 +105,42 @@
                     </div>
                 </div>
             </section>
-            <section class="sc-work">
+
+            <section class="sc-work" id="work">
+                <h2 class="blind">제 작업물을 소개합니다.</h2>
                 <div class="work-area">
+
+
                     <div class="col-inner col-left">
-                        <div class="group-flex">
-                            <a href="" class="link-work">
+
+                        <!-- 작업물1 -->
+                        <article class="group-flex">
+                            <a href="" class="link-work" target="_blank" title="새창">
                                 <img src="https://www.highopes.co/wp-content/uploads/2021/10/VC_Posters-min-1-scaled.jpg.webp" alt="">
                                 <div class="overlay">
-                                    <strong class="work-title">VidaCann</strong>
+                                    <h3 class="work-title">NIVEA</h3>
                                     <p class="work-desc">
                                         Accelerating a leader in medical cannabis that's by Floridians, for Floridians.
                                     </p>
                                 </div>
                             </a>
-                        </div>
-                        <div class="group-flex">
+
                             <div class="text-wrap">
-                                <span class="text">Like what we’ve made and need a helping hand with your dispensary logo? Cannabis package design? Something else?</span>
+                                <p class="text">Like what we’ve made and need a helping hand with your dispensary logo? Cannabis package design? Something else?</p>
                                 <span class="text">Let's connect.</span>
-                                <a href="" class="link-line">
-                                    <span>GET STARTED</span>
+                                <a href="" class="link-line" target="_blank" title="새창">
+                                    <span>Go Site</span>
+                                </a>
+                                <a href="" class="link-line" target="_blank" title="새창">
+                                    <span>이렇게 제작했습니다.</span>
                                 </a>
                             </div>
-                            <a href="" class="link-work">
-                                <img src="https://www.highopes.co/wp-content/uploads/2021/10/nuvata.jpg.webp" alt="">
-                                <div class="overlay">
-                                    <strong class="work-title">Nuvata</strong>
-                                    <p class="work-desc">
-                                        Enjoy the wellness, mindefulness, and fun that cannabis can bring to life.
-                                    </p>
-                                </div>
-                            </a>
+
+                        </article>
+
+
+                        <article class="group-flex">
+                            
                             <a href="" class="link-work">
                                 <img src="https://www.highopes.co/wp-content/uploads/2021/10/DD_StreetPoster1.jpg.webp" alt="">
                                 <div class="overlay">
@@ -157,16 +150,22 @@
                                     </p>
                                 </div>
                             </a>
-                        </div>
+
+                        </article>
+
                     </div>
+
+
                     <div class="col-inner col-right">
-                        <div class="group-flex">
+
+                        <article class="group-flex">
                             <div class="work-info">
                                 <span class="text">Welcome to HIGHOPES, a top branding agency for cannabis websites, dispensary design, cannabis marketing and more.</span>
                                 <span class="text">Check out some of our favorite projects.</span>
                             </div>
-                        </div>
-                        <div class="group-flex">
+                        </article>
+
+                        <article class="group-flex">
                             <a href="" class="link-work">
                                 <img src="https://www.highopes.co/wp-content/uploads/2022/01/wunder_iphone.jpg.webp" alt="">
                                 <div class="overlay">
@@ -176,8 +175,9 @@
                                     </p>
                                 </div>
                             </a>
-                        </div>
-                        <div class="group-flex">
+                        </article>
+
+                        <article class="group-flex">
                             <a href="" class="link-work">
                                 <img src="https://www.highopes.co/wp-content/uploads/2022/01/MC_PackagingDesign_Mockups_V6-1.jpg.webp" alt="">
                                 <div class="overlay">
@@ -187,113 +187,44 @@
                                     </p>
                                 </div>
                             </a>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </section>
 
+            <!-- 교육 -->
+            
             <section class="sc-corp"> <!-- 배경색 전환 black -->
+                <h2 class="blind">교육과정</h2>
                 <div class="corp-area">
                     <div class="text-wrap">
-                        <span class="text">We’re passionate about working with those who are passionate about cannabis.</span>
-                        <span class="text">Here are some of the companies we’re lucky to call clients.</span>
+                        <p class="text">
+                            국비교육과정 6개월과 사설학원 3개월 과정 총 980시간을 통해 <br>
+                            즉시 투입가능한 인재가 되었습니다. 
+                        </p>
                     </div>
-                    <div class="group-image">
-                        <div class="image-wrap">
-                            <figure class="image-inner">
-                                <img src="https://www.highopes.co/wp-content/uploads/2022/01/DD_Logo_Primary-Color-min.png.webp" alt="">
-                            </figure>
-                        </div>
-                        <div class="image-wrap">
-                            <figure class="image-inner">
-                                <img src="https://www.highopes.co/wp-content/uploads/2022/01/rwb-narrower-style-q2-2019.png.webp" alt="">
-                            </figure>
-                        </div>
-                        <div class="image-wrap">
-                            <figure class="image-inner">
-                                <img src="https://www.highopes.co/wp-content/uploads/2022/01/vidacann-logo.png.webp" alt="">
-                            </figure>
-                        </div>
-                        <div class="image-wrap">
-                            <figure class="image-inner">
-                                <img src="https://www.highopes.co/wp-content/uploads/2022/01/CASA.png.webp" alt="">
-                            </figure>
-                        </div>
-                        <div class="image-wrap">
-                            <figure class="image-inner">
-                                <img src="https://www.highopes.co/wp-content/uploads/2022/01/Friendly_Farms_Logo-1.png.webp" alt="">
-                            </figure>
-                        </div>
-                        <div class="image-wrap">
-                            <figure class="image-inner">
-                                <img src="https://www.highopes.co/wp-content/uploads/2022/01/kanha-logo.png.webp" alt="">
-                            </figure>
-                        </div>
-                        <div class="image-wrap">
-                            <figure class="image-inner">
-                                <img src="https://www.highopes.co/wp-content/uploads/2022/01/WU_Logo_Green.png.webp" alt="">
-                            </figure>
-                        </div>
-                        <div class="image-wrap">
-                            <figure class="image-inner">
-                                <img src="https://www.highopes.co/wp-content/uploads/2022/01/NU_Logo_Icon-min.png.webp" alt="">
-                            </figure>
-                        </div>
+
+                    <div class="edu-area" role="tablist">
+                        <ul>
+                            <li>
+                                <a href="" data-edu="0" role="tab" class="active">교육 전</a>
+                            </li>
+                            <li>
+                                <a href="" data-edu="1" role="tab">국비학원 수료</a>
+                            </li>
+                            <li>
+                                <a href="" data-edu="2" role="tab">사설학원 수료</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--  -->
+                    <div class="chart-area">
+                        <canvas id="myChart"></canvas>
                     </div>
                 </div>
             </section>
-            <section class="sc-service"> <!-- 배경색 전환 white -->
-                <div class="service-area">
-                    <div class="text-wrap">
-                        <span class="text">Our branding agency provides creative solutions customized for the cannabis industry.</span>
-                        <span class="text">Here are our specialities.</span>
-                        <a href="" class="link-line">
-                            <span>LEARN MORE</span>
-                        </a>
-                    </div>
-                    <div class="service-wrap">
-                        <div class="service-box">
-                            <a href="" class="link-service">Branding</a>
-                            <a href="" class="link-service">Packaging</a>
-                            <a href="" class="link-service">Website Design</a>
-                            <a href="" class="link-service">Marketing & Advertising</a>
-                        </div>
-                        <div class="service-box">
-                            <ul class="service-list">
-                                <li class="service-item">Brand Strategy</li>
-                                <li class="service-item">Messaging</li>
-                                <li class="service-item">Naming</li>
-                                <li class="service-item">Logo Design</li>
-                                <li class="service-item">Identity Design</li>
-                                <li class="service-item">Brand Guidelines</li>
-                            </ul>
-                            <ul class="service-list">
-                                <li class="service-item">Sourcing</li>
-                                <li class="service-item">Concepting</li>
-                                <li class="service-item">Packaging Design</li>
-                                <li class="service-item">Proofing</li>
-                                <li class="service-item">POS & Merchandisers</li>
-                            </ul>
-                            <ul class="service-list">
-                                <li class="service-item">UX/UI Design</li>
-                                <li class="service-item">Development</li>
-                                <li class="service-item">E-Commerce</li>
-                                <li class="service-item">Maintenance</li>
-                                <li class="service-item">Management</li>
-                                <li class="service-item">Optimization</li>
-                            </ul>
-                            <ul class="service-list">
-                                <li class="service-item">SEO</li>
-                                <li class="service-item">Blog Post Copywriting</li>
-                                <li class="service-item">Digital Marketing</li>
-                                <li class="service-item">Print</li>
-                                <li class="service-item">In-Store Collateral</li>
-                                <li class="service-item">Out of Home</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
             <section class="sc-six">
                 <div class="six-area">
                     <div class="text-wrap">
@@ -306,7 +237,9 @@
                     </div>
                 </div>
             </section>
+
             <section class="sc-seven">
+                <h2 class="blind">나의 공부 방법</h2>
                 <div class="seven-area">
                     <div class="swiper swiperBar">
                         <div class="swiper-wrapper">
@@ -315,8 +248,8 @@
                                     <img src="https://www.highopes.co/wp-content/uploads/2022/05/sam-moghadam-khamseh-baII27W6z7k-unsplash-2.jpg.webp" alt="">
                                 </div>
                                 <div class="text-wrap">
-                                    <strong class="title">Collaboration is king, and queen.</strong>
-                                    <p class="desc">Our clients always sit shotgun on our road trip to success. We believe your opinions and insights are valuable in yielding the best solutions.</p>
+                                    <strong class="title">1일 1커밋</strong>
+                                    <p class="desc">저는 나태해 지지않기 위해 1일 1커밋을 실천했습니다.</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -324,8 +257,8 @@
                                     <img src="https://www.highopes.co/wp-content/uploads/2022/05/hand_img1.jpg.webp" alt="">
                                 </div>
                                 <div class="text-wrap">
-                                    <strong class="title">Collaboration is king, and queen.</strong>
-                                    <p class="desc">Our clients always sit shotgun on our road trip to success. We believe your opinions and insights are valuable in yielding the best solutions.</p>
+                                    <strong class="title">wai-area</strong>
+                                    <p class="desc">설명 ~~~~~~~~~</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -333,8 +266,8 @@
                                     <img src="https://www.highopes.co/wp-content/uploads/2022/05/Innovation.jpg.webp" alt="">
                                 </div>
                                 <div class="text-wrap">
-                                    <strong class="title">Collaboration is king, and queen.</strong>
-                                    <p class="desc">Our clients always sit shotgun on our road trip to success. We believe your opinions and insights are valuable in yielding the best solutions.</p>
+                                    <strong class="title">클론코딩</strong>
+                                    <p class="desc">30여개의 사이트를 하나하나 코드를 해체해 분석해보며 느낀 마크업 시멘틱한 마크업을 구성하기 위해 노력</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -360,7 +293,9 @@
                     </div>
                 </div>
             </section>
+
             <section class="sc-eight">
+                <h2 class="blind">취업 후 나와의 약속</h2>
                 <div class="eight-area">
                     <div class="text-wrap">
                         <span class="text">We're big fans of listening but never shy to do the talking either.</span>
@@ -370,13 +305,13 @@
                         <div class="post-box">
                             <em>Huffington Post</em>
                             <a href="" class="link-post">
-                                <span>Celebs Go To Pot By Creating Their Own Cannabis Brands</span>
+                                <span>트렌드에 대한</span>
                             </a>
                         </div>
                         <div class="post-box">
                             <em>Huffington Post</em>
                             <a href="" class="link-post">
-                                <span>Celebs Go To Pot By Creating Their Own Cannabis Brands</span>
+                                <span>자기계발</span>
                             </a>
                         </div>
                         <div class="post-box">
@@ -460,6 +395,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="./asset/js/common.js"></script>
     <script src="./asset/js/main.js"></script>
 </body>
