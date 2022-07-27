@@ -224,61 +224,61 @@ textarea::-webkit-outer-spin-button {
   color: #d5af31;
 }
 
-.header {
+.head {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 99;
 }
-.header .head-area {
+.head-area {
   padding-top: 58px;
   max-width: 1425px;
   margin: 0 auto;
 }
-.header .head-wrap {
+.head-wrap {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.header .head-box {
+.head-box {
   display: flex;
   position: relative;
   width: 33.3%;
 }
-.header .head-box:nth-child(1) {
+.head-box:nth-child(1) {
   padding: 10px 10px 10px 20px;
   justify-content: flex-start;
 }
-.header .head-box:nth-child(2) {
+.head-box:nth-child(2) {
   padding: 10px 10px 10px 10px;
   justify-content: center;
 }
-.header .head-box:nth-child(3) {
+.head-box:nth-child(3) {
   padding: 10px 20px 10px 10px;
   justify-content: flex-end;
 }
-.header .logo {
+.head .logo {
   font-size: 36px;
   font-weight: 800;
 }
-.header .btn-menu {
+.head .btn-menu {
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.2em;
   z-index: 2;
 }
-.header .btn-chat {
+.head .btn-chat {
   position: relative;
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.2em;
 }
-.header .btn-chat > span:hover::before {
+.head .btn-chat > span:hover::before {
   width: 0%;
   transition: all 0.3s;
 }
-.header .btn-chat span::before {
+.head .btn-chat span::before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -289,10 +289,10 @@ textarea::-webkit-outer-spin-button {
   background: #d5af31;
   transition: all 0.3s;
 }
-.header .menu {
+.head .menu {
   color: #000;
 }
-.header .menu-area {
+.head .menu-area {
   position: fixed;
   top: 0;
   left: 0;
@@ -309,16 +309,16 @@ textarea::-webkit-outer-spin-button {
   opacity: 0;
   z-index: 1;
 }
-.header .menu-item {
+.head .menu-item {
   padding: 20px 0;
   font-size: 50px;
   font-weight: 600;
 }
-.header .menu-item i {
+.head .menu-item i {
   font-size: 20px;
   vertical-align: top;
 }
-.header .menu-item a {
+.head .menu-item a {
   display: block;
 }
 

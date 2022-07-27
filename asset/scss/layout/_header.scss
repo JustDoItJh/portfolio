@@ -1,19 +1,19 @@
-.header {
+.head {
     position: fixed;
     top: 0; left: 0;
     width: 100%;
     z-index: 99;
-    .head-area {
+    &-area {
         padding-top: 58px;
         max-width: 1425px;
         margin: 0 auto;
     }
-    .head-wrap {
+    &-wrap {
         display: flex;
         justify-content: space-between;
         width: 100%;
     }
-    .head-box {
+    &-box {
         display: flex;
         position: relative;
         width: 33.3%;
@@ -50,6 +50,7 @@
     }
     .menu {
         color: #000;
+
         &-area {
             position: fixed;
             top: 0;left: 0;

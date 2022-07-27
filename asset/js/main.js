@@ -143,21 +143,21 @@ $('.edu-area a').click(function(e){
 const menu = gsap.timeline({  // 시간 순서대로 하나씩 이벤트 발생
   paused:true, // 시작부터 일시정지
 })
-menu.to('.header .menu-area', {opacity:1})
-.fromTo('.header .menu-item',
+menu.to('.head .menu-area', {opacity:1})
+.fromTo('.head .menu-item',
  {xPercent:-10, opacity:0},
  {xPercent:0, opacity:1, stagger:0.1}
 )
-.to('.header .menu-item .link-menu', 0.3, {scale:1.2})
+.to('.head .menu-item .link-menu', 0.3, {scale:1.2})
 
 $('.btn-menu').click(function(){
 
-  if($('.header .btn-menu').text() == 'CLOSE'){
-    $('.header .btn-menu').text('MENU')
+  if($('.head .btn-menu').text() == 'CLOSE'){
+    $('.head .btn-menu').text('MENU')
     menu.reverse()
   } else {
-    gsap.set('.header .menu-area', {display:'flex'})
-    $('.header .btn-menu').text('CLOSE')
+    gsap.set('.head .menu-area', {display:'flex'})
+    $('.head .btn-menu').text('CLOSE')
     menu.restart()
   }
 
