@@ -13,7 +13,7 @@
         justify-content: space-between;
         width: 100%;
     }
-    &-box {
+    &-box { // 부모 width를 각각 3등분해서 box로 감싸고 justify content로 지정해줘야 먹힘
         display: flex;
         position: relative;
         width: 33.3%;
@@ -55,7 +55,7 @@
             position: fixed;
             top: 0;left: 0;
             right: 0; bottom: 0;
-            background: rgba($color: #fff, $alpha: .5);
+            background: rgba($color: #000, $alpha: .5);
             backdrop-filter: blur(50px);
             // z-index: ;
             display: flex;
@@ -63,6 +63,7 @@
             justify-content: center;
             text-align: center;
             display: none;
+            overflow-y: hidden;
             opacity: 0;
             z-index: 1;
         }

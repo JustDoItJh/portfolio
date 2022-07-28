@@ -140,6 +140,8 @@ $('.edu-area a').click(function(e){
 })
 
 
+
+
 const menu = gsap.timeline({  // 시간 순서대로 하나씩 이벤트 발생
   paused:true, // 시작부터 일시정지
 })
