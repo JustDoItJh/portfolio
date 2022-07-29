@@ -15,14 +15,16 @@
     border: 1px solid #d5af31;
     padding: 15px 45px;
     transition-duration: 0.5s;
+    .overlay & {
+        padding: 10px 30px;
+        border-radius: 5px;
+    }
 
     &:hover {
         border: 1px solid #131313;
     }
-
-    .footer &:hover {
-        background: #d5af31;
-    }
+    .overlay &:hover {background: #d5af31;}
+    .footer &:hover {background: #d5af31;}
 }
 
 .link {
