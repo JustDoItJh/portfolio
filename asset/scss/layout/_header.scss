@@ -73,7 +73,11 @@
             font-size: 50px;
             font-weight: 600;
             i{font-size: 20px; vertical-align: top;}
-            a {display: block;}
+            a {
+                display: block;
+                transition: all .3s;
+                &:hover {color: #d5af31;}
+            }
         }
     }
 }

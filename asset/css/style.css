@@ -328,6 +328,10 @@ textarea::-webkit-outer-spin-button {
 }
 .head .menu-item a {
   display: block;
+  transition: all 0.3s;
+}
+.head .menu-item a:hover {
+  color: #d5af31;
 }
 
 .footer {
