@@ -21,16 +21,34 @@
             line-height: 1.2em;
             
         }
+        .splitting .char {
+            animation: slide-in 0.8s cubic-bezier(.5, 0, .5, 1) both;
+            animation-delay: calc(60ms * var(--char-index));
+          }
+          
+          @keyframes slide-in {
+            from {
+              transform: translateY(-1em) rotate(-.05turn) scale(0.5);
+              opacity: 0;
+            }
+          }
     }
     .drag-area {
         margin: 0 auto;
         height: 100vh;
         z-index: 1;
-        .image-wrap{height: 100%;}
-        img {
-            width: 100%; height: 100%;
-            object-fit: cover;
+        .image-wrap{
+            height: 100%; width: 100%;
+            background-image: url(../images/visual.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
         }
+        // img {
+        //     width: 100%; height: 100%;
+        //     object-fit: cover;
+        // }
     }
 }
 
@@ -71,7 +89,24 @@
     background: #fff;
     color: #131313;
     width: 100%;
+    padding-bottom: 100px;
 
+    .title {
+        display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        font-size: 72px;
+        font-weight: 800;
+        text-align: left;
+        margin: 0 0 50px 50px;
+        &::after {
+            content: '';
+            flex-grow: 1;
+            background: #131313;
+            height: 1px;
+            margin-left: 20px;
+        }
+    }
     .work-area {
         display: flex;
         justify-content: center;
@@ -170,34 +205,35 @@
                 margin-top: 30px;
                 .text {
                     display: block;
-                    font-size: 28px;
-                    line-height: 1.3em;
+                    font-size: 24px;
+                    line-height: 1.5em;
                     margin-bottom: 30px;
+                    em {font-size: 26px; color: #d5af31;}
                 }
             }
         }
     }
 }
 
-.sc-corp {
+.sc-edu {
     position: relative;
     width: 100%;
     background: #131313;
     color: #fff;
     padding: 180px 0;
-    .corp-area {
+    .edu-area {
         max-width: 1150px;
         text-align: center;
         margin: 0 auto;
 
-        .edu-area {
+        .edu-wrap {
             ul{display: flex;justify-content: center;}
             li{padding: 0 15px;}
             a{
                 font-size: 18px;
                 font-weight: 500;
                 display: inline-block;
-
+                width: 150px;
                 padding: 9px 20px;
                 margin-left: 8px;
                 background-color: rgba(0,0,0,.05);
@@ -300,42 +336,36 @@
     }
 }
 
-.sc-six {
-    padding: 20px 0;
-    background: #fff;
-    color: #131313;
 
-    .six-area {
-        position: relative;
-        max-width: 1150px;
-        margin: 0 auto;
-        display: flex;
-        
-        .text-wrap {
-            width: 60%;
-            .text {
-                font-size: 28px;
-                font-weight: 500;
-                line-height: 1.3em;
-            }
-        }
-        .link-wrap {
-            width: 40%;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-        }
-    }
-}
 
-.sc-seven {
+.sc-attitude {
     position: relative;
     padding: 75px 0 200px;
-    background: #fff;
+    background: #fdfbf4;
     color: #131313;
     overflow-x: hidden;
-    
-    .seven-area {
+    .text-wrap {
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 100px 0;
+        .text {
+            position: relative;
+            font-size: 18px;
+            em {
+                font-size: 72px;
+                font-weight: 800;
+                margin-right: 30px;
+            }
+            &::after {
+                content: '';
+                height: 1px; width: 100%;
+                position: absolute;
+                bottom: 0%; left: 0;
+                background: #131313;
+            }
+        }
+    }
+    .attitude-area {
         width: 100%;
         margin: 0 auto;
         
@@ -371,19 +401,19 @@
                         flex-basis: 50%;
                         overflow: hidden;
                         height: 300px;
-                        padding: 0 10% 0 36px;
+                        padding: 0 5% 0 36px;
                         
                         .title {
                             display: block;
                             font-size: 28px;
-                            font-weight: 500;
+                            font-weight: 700;
                             line-height: 1.3em;
                             padding-bottom: 20px;
                         }
                         .desc {
                             display: block;
-                            font-size: 21px;
-                            line-height: 1.3em;
+                            font-size: 18px;
+                            line-height: 1.5em;
                         }
                     }
                 }

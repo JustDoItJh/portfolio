@@ -1,5 +1,7 @@
 $(function(){
 
+  Splitting();
+
 
   var swiper = new Swiper(".swiperBar", {
       // 하단 스크롤바 생성
@@ -39,7 +41,7 @@ $(function(){
 
   const dataSample = { // 차트에 들어갈 데이터
     labels: [
-        'html','css','js','gihub','gsap','작업속도','완성도'
+        'HTML','CSS','JS','작업 속도','웹 접근성','GSAP','GITHUB'
     ],
     datasets: [
         { //데이터
@@ -49,12 +51,12 @@ $(function(){
             ],
             backgroundColor: [
                 //색상
-                'rgba(255, 99, 132, 0.7)',
-                'rgba(54, 162, 235, 0.7)',
-                'rgba(255, 206, 86, 0.7)',
-                'rgba(75, 192, 192, 0.7)',
-                'rgba(153, 102, 255, 0.7)',
-                'rgba(255, 159, 64, 0.7)'
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
             ],
             borderColor: [
                 //경계선 색상
@@ -86,11 +88,11 @@ var myChart = new Chart(context, {
     scale: {
       ticks: {
         beginAtZero: true,
-        max: 50,
+        max: 100,
         min: 0,
-        stepSize:10,
+        stepSize:20,
         backdropColor: 'black',
-        fontSize: 19,
+        fontSize: 13,
         fontFamily:"Pretendard"
       },
       gridLines: {
@@ -101,7 +103,7 @@ var myChart = new Chart(context, {
       },
       pointLabels:{
         fontColor: '#fff',
-        fontSize: 25,
+        fontSize: 20,
         fontFamily: "Pretendard"
       }
     },
@@ -123,9 +125,9 @@ var myChart = new Chart(context, {
 
 
 dataArr = [
-  [10,10,10,20,20,20,30], // data-edu 0
-  [20,30,20,50,40,30,30], // data-edu 1
-  [50,40,30,50,20,40,50]  // data-edu 2
+  [30,25,10,10,20,0,0], // data-edu 0
+  [60,50,30,50,40,10,30], // data-edu 1
+  [90,85,65,70,70,60,70]  // data-edu 2
 ]
 
 $('.edu-area a').click(function(e){

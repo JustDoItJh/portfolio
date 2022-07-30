@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./asset/css/style.css">
 </head>
@@ -52,44 +54,48 @@
                         </div>
                     </div>
                     <div class="head-box">
-                        <button href="" class="btn-chat"><span>LET'S CHAT</span></button>
+                        <a href="#contact" class="btn-chat" role="button"><span>CONTACT</span></a>
                     </div>
                 </div>
             </div>
         </header>
         <!-- main -->
         <main class="main" role="main">
+            <!-- Intro -->
             <section class="sc-intro">
                 <div class="title-wrap">
-                    <h2 class="title">BE THE NEXT GREAT <br> CANNABIS BRAND</h2>
+                    <h2 class="title" data-splitting>TAKE IT TO <br> THE NEXT LEVEL <br> WEB PUBLISHER</h2>
                 </div>
                 <div class="drag-area">
                     <!-- 의미없는 비쥬얼 이미지 (비디오) -->
                     <figure class="image-wrap">
-                        <img src="./asset/images/visual.jpg" alt="">
+                        
                     </figure>
                 </div>
             </section>
 
-            <!-- id에만 대문자 -->
+            <!-- Intro Description -->
             <section class="sc-description" id="intro"> <!-- 배경색 전환 white-->
                 <h2 class="blind">입사 후 포부</h2>
                 <div class="description-area">
                     <div class="description-inner">
                         <p class="text">
-                            퍼블리셔로서, 더 나아가 프론트엔드 전문가가 될 수 있도록 현재에는 충실하되 <a href="" class="link-color">항상 미래를 보는 사람이되고싶습니다.</a>
+                            퍼블리셔로서, 기본기와 스킬을 겸비하고 <br>
+                            <a href="" class="link-color">부족한 점을 끊임없이 노력으로 채우며</a> <br>
+                            믿을 수 있는 웹 퍼블리셔가 되길 지향합니다.
                         </p>
                     </div>
                     <div class="description-inner">
                         <a href="" class="link-line">
-                            <span>SEE OUR WORK</span>
+                            <span>SEE MY WORK</span>
                         </a>
                     </div>
                 </div>
             </section>
 
+            <!-- My Work -->
             <section class="sc-work" id="work">
-                <h2 class="blind">제 작업물을 소개합니다.</h2>
+                <h2 class="title line">My Projects</h2>
                 <div class="work-area">
                     <div class="col-inner col-left">
                         <!-- 작업물1 -->
@@ -99,9 +105,8 @@
                                 <div class="overlay">
                                     <h3 class="work-title">NIVEA</h3>
                                     <p class="work-desc">
-                                        Accelerating a leader in medical cannabis that's by Floridians, for Floridians.
+                                        적응형 PC - 사이트 리뉴얼, 마우스 Drag / swiper / gsap 사용
                                     </p>
-                                    
                                     <div class="link-box">
                                         <a href="" class="link-line" target="_blank" title="새창" role="button">
                                             <span>Go Site</span>
@@ -110,21 +115,18 @@
                                             <span>이렇게 제작했습니다.</span>
                                         </a>
                                     </div>
-                                    
                                 </div>
                             </figure>
-
-
                         </article>
 
 
                         <article class="group-flex">
                             <figure class="link-work">
-                                <img src="https://www.highopes.co/wp-content/uploads/2021/10/DD_StreetPoster1.jpg.webp" alt="">
+                                <img src="./asset/images/work_naver1.png" alt="">
                                 <div class="overlay">
-                                    <strong class="work-title">Double Delicious</strong>
+                                    <strong class="work-title">네이버</strong>
                                     <p class="work-desc">
-                                        An industry pioneer ready to reposition in order to progress into an industry leader.
+                                        적응형 PC - 시멘틱태그, 웹 접근성, ir/is 기법
                                     </p>
                                     <div class="link-box">
                                         <a href="" class="link-line" target="_blank" title="새창" role="button">
@@ -136,7 +138,6 @@
                                     </div>
                                 </div>
                             </figure>
-
                         </article>
 
                     </div>
@@ -145,18 +146,40 @@
                     <div class="col-inner col-right">
                         <article class="group-flex">
                             <div class="work-info">
-                                <span class="text">Welcome to HIGHOPES, a top branding agency for cannabis websites, dispensary design, cannabis marketing and more.</span>
-                                <span class="text">Check out some of our favorite projects.</span>
+                                <p class="text">
+                                    낯선 퍼블리싱 세계에서 <br>
+                                    부족했던 스킬들을 <em>꾸준히</em> 높였습니다. <br>
+                                    '0'에서부터 시작된 <br>
+                                    <em>노력의 결과들을</em> 확인해보세요!
+                                </p>
                             </div>
                         </article>
-
                         <article class="group-flex">
                             <figure class="link-work">
-                                <img src="https://www.highopes.co/wp-content/uploads/2022/01/wunder_iphone.jpg.webp" alt="">
+                                <img src="https://www.highopes.co/wp-content/uploads/2021/10/DD_StreetPoster1.jpg.webp" alt="">
                                 <div class="overlay">
-                                    <strong class="work-title">Wunder</strong>
+                                    <strong class="work-title">Airpods(2세대)</strong>
                                     <p class="work-desc">
-                                        A better digital experience of a better, breezier cannabis-infused beverage.
+                                        반응형 - 메뉴 Scroll 슬라이드 / Footer 아코디언메뉴
+                                    </p>
+                                    <div class="link-box">
+                                        <a href="" class="link-line" target="_blank" title="새창" role="button">
+                                            <span>Go Site</span>
+                                        </a>
+                                        <a href="" class="link-line" target="_blank" title="새창" role="button">
+                                            <span>이렇게 제작했습니다.</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </figure>
+                        </article>
+                        <article class="group-flex">
+                            <figure class="link-work">
+                                <img src="./asset/images/work_webtoon.png" alt="">
+                                <div class="overlay">
+                                    <strong class="work-title">네이버 웹툰</strong>
+                                    <p class="work-desc">
+                                        적응형 모바일 - swiper / json 데이터 / 메뉴 슬라이드
                                     </p>
                                     <div class="link-box">
                                         <a href="" class="link-line" target="_blank" title="새창" role="button">
@@ -170,42 +193,25 @@
                             </figure>
                         </article>
 
-                        <article class="group-flex">
-                            <figure class="link-work">
-                                <img src="https://www.highopes.co/wp-content/uploads/2022/01/MC_PackagingDesign_Mockups_V6-1.jpg.webp" alt="">
-                                <div class="overlay">
-                                    <strong class="work-title">Better Daze</strong>
-                                    <p class="work-desc">
-                                        Introducing naturally better cannabis for a high with a higher purpose.
-                                    </p>
-                                    <div class="link-box">
-                                        <a href="" class="link-line" target="_blank" title="새창" role="button">
-                                            <span>Go Site</span>
-                                        </a>
-                                        <a href="" class="link-line" target="_blank" title="새창" role="button">
-                                            <span>이렇게 제작했습니다.</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </figure>
-                        </article>
+
                     </div>
                 </div>
             </section>
 
-            <!-- 교육 -->
-            
-            <section class="sc-corp"> <!-- 배경색 전환 black -->
+            <!-- Education -->
+            <section class="sc-edu" id="edu"> <!-- 배경색 전환 black -->
                 <h2 class="blind">교육과정</h2>
-                <div class="corp-area">
+                <div class="edu-area">
                     <div class="text-wrap">
                         <p class="text">
-                            국비교육과정 6개월과 사설학원 3개월 과정 총 980시간을 통해 <br>
-                            즉시 투입가능한 인재가 되었습니다. 
+                            호기심으로 시작된 처음 <br>
+                            국비교육과정 6개월, 사설학원 3개월 - 총 9개월 <br>
+                            기업에서 원하는 인재가 될 준비가 됐습니다.
                         </p>
                     </div>
 
-                    <div class="edu-area" role="tablist">
+                    <!-- Button Sort -->
+                    <div class="edu-wrap" role="tablist">
                         <ul>
                             <li>
                                 <a href="" data-edu="0" role="tab" class="active">교육 전</a>
@@ -219,74 +225,84 @@
                         </ul>
                     </div>
 
-                    <!--  -->
+                    <!-- 눈으로 보는 성장 차트 -->
                     <div class="chart-area">
                         <canvas id="myChart"></canvas>
                     </div>
                 </div>
             </section>
 
-            <section class="sc-six">
-                <div class="six-area">
-                    <div class="text-wrap">
-                        <span class="text">We are just like you — cannabis advocates, believers, and connoisseurs — driven to bring out the best in the recreational and medical industries.</span>
-                    </div>
-                    <div class="link-wrap">
-                        <a href="" class="link-line">
-                            <span>LEARN MORE</span>
-                        </a>
-                    </div>
+            <!-- My Attitude -->
+            <section class="sc-attitude" id="attitude">
+                <h2 class="blind">퍼블리셔로서 가져야 할 자세</h2>
+                <div class="text-wrap">
+                    <p class="text">
+                        <em>Attitude</em> 
+                        좋은 퍼블리셔가 되기 위한 자기 자신과의 약속 5가지
+                    </p>
                 </div>
-            </section>
-
-            <section class="sc-seven">
-                <h2 class="blind">나의 공부 방법</h2>
-                <div class="seven-area">
+                <div class="attitude-area">
                     <div class="swiper swiperBar">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="image-wrap">
-                                    <img src="https://www.highopes.co/wp-content/uploads/2022/05/sam-moghadam-khamseh-baII27W6z7k-unsplash-2.jpg.webp" alt="">
+                                    <img src="./asset/images/study1.jpg" alt="">
                                 </div>
                                 <div class="text-wrap">
                                     <strong class="title">1일 1커밋</strong>
-                                    <p class="desc">저는 나태해 지지않기 위해 1일 1커밋을 실천했습니다.</p>
+                                    <p class="desc">
+                                        하루에 조금이라도 코딩을 하다보니 일기처럼 코딩하는 습관이 생겼습니다.
+                                        매일 코딩을 해야한다는 압박감 때문에 번아웃이 가끔 올수도 있지만, 이를 해소하기 위해 충분한 휴식도 취할 것입니다.
+                                    </p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="image-wrap">
-                                    <img src="https://www.highopes.co/wp-content/uploads/2022/05/hand_img1.jpg.webp" alt="">
+                                    <img src="./asset/images/study2.jpg" alt="">
                                 </div>
                                 <div class="text-wrap">
-                                    <strong class="title">wai-area</strong>
-                                    <p class="desc">설명 ~~~~~~~~~</p>
+                                    <strong class="title">커뮤니케이션</strong>
+                                    <p class="desc">
+                                        커뮤니케이션은 어느 곳에서도 단연 가장 중요하다고 생각합니다.
+                                        퍼블리셔 또한 혼자하는 업무가 아니기에 소통에서 유연한 태도를 가지겠습니다.
+                                    </p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="image-wrap">
-                                    <img src="https://www.highopes.co/wp-content/uploads/2022/05/Innovation.jpg.webp" alt="">
+                                    <img src="./asset/images/study3.jpg" alt="">
+                                </div>
+                                <div class="text-wrap">
+                                    <strong class="title">웹 접근성 중시</strong>
+                                    <p class="desc">
+                                        "퍼블리셔의 불편함이 사용자의 차별이 되어서는 안된다."
+                                        이 말을 교육을 받으면서 자주 들었습니다.
+                                        모든 마크업의 가장 기본은 논리적인 마크업이라고 생각하고 항상 실천하겠습니다. (Wai-area)
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image-wrap">
+                                    <img src="./asset/images/study4.jpg" alt="">
                                 </div>
                                 <div class="text-wrap">
                                     <strong class="title">클론코딩</strong>
-                                    <p class="desc">30여개의 사이트를 하나하나 코드를 해체해 분석해보며 느낀 마크업 시멘틱한 마크업을 구성하기 위해 노력</p>
+                                    <p class="desc">
+                                        크고 작은 사이트의 코드를 하나 하나 해체해 분석해보며 
+                                        느낀 마크업을 구성하는 능력을 키워 나가겠습니다. (탄탄한 마크업, 스크립트 실력)
+                                    </p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="image-wrap">
-                                    <img src="https://www.highopes.co/wp-content/uploads/2022/05/Exploration.jpg" alt="">
+                                    <img src="./asset/images/study5.jpg" alt="">
                                 </div>
                                 <div class="text-wrap">
-                                    <strong class="title">Collaboration is king, and queen.</strong>
-                                    <p class="desc">Our clients always sit shotgun on our road trip to success. We believe your opinions and insights are valuable in yielding the best solutions.</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="image-wrap">
-                                    <img src="https://www.highopes.co/wp-content/uploads/2022/05/Honesty.jpg.webp" alt="">
-                                </div>
-                                <div class="text-wrap">
-                                    <strong class="title">Collaboration is king, and queen.</strong>
-                                    <p class="desc">Our clients always sit shotgun on our road trip to success. We believe your opinions and insights are valuable in yielding the best solutions.</p>
+                                    <strong class="title">배움의 자세</strong>
+                                    <p class="desc">
+                                        아직 부족한 점이 있기 때문에 배움에 있어서 주춤 하지않고,
+                                        새로운 도전에 열린 마음을 갖고 임하겠습니다. (개발 vue.js, react)
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -294,89 +310,45 @@
                     </div>
                 </div>
             </section>
-
-            <section class="sc-eight">
-                <h2 class="blind">취업 후 나와의 약속</h2>
-                <div class="eight-area">
-                    <div class="text-wrap">
-                        <span class="text">We're big fans of listening but never shy to do the talking either.</span>
-                        <span class="text">Give some of our recent press a read.</span>
-                    </div>
-                    <div class="post-wrap">
-                        <div class="post-box">
-                            <em>Huffington Post</em>
-                            <a href="" class="link-post">
-                                <span>트렌드에 대한</span>
-                            </a>
-                        </div>
-                        <div class="post-box">
-                            <em>Huffington Post</em>
-                            <a href="" class="link-post">
-                                <span>자기계발</span>
-                            </a>
-                        </div>
-                        <div class="post-box">
-                            <em>Huffington Post</em>
-                            <a href="" class="link-post">
-                                <span>Celebs Go To Pot By Creating Their Own Cannabis Brands</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </main>
         <!-- footer -->
-        <footer class="footer">
+        <footer class="footer" id="contact">
             <div class="group-inner1">
                 <div class="col-left">
-                    <span class="text">BECOME THE NEXT GREAT CANNABIS</span>
-                    <div class="text-change">
-                        <span class="active">first</span>
-                        <span>second</span>
-                        <span>third</span>
-                        <span>fourth</span>
-                        <span>fifth</span>
-                    </div>
-                    <p class="desc">If you’re looking to join forces on a project or just learn more about what our design agency can do for your cannabis business, get in touch. We’d be happy to chat.</p>
-                    <a href="" class="link-line">
-                        <span>GET STARTED</span>
-                    </a>
+                    <em class="text">Be Publisher</em>
+                    
+                    <p class="desc">
+                        단단한 기본기와 우수한 스크립트 실력을 쌓은 후, <br>
+                        프론트엔드 개발자가 되기 위해 정진하고 도전할 것입니다.
+                    </p>
+                    
                 </div>
                 <div class="col-right">
                     <nav class="nav-wrap">
                         <ul class="nav-list">
                             <li class="nav-item">
-                                <a href="" class="link-nav link">WORK</a>
+                                <a href="#intro" class="link-nav link">INTRO</a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="link-nav link">AGENCY</a>
+                                <a href="#edu" class="link-nav link">EDUCATION</a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="link-nav link">NEWS</a>
+                                <a href="#work" class="link-nav link">WORK</a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="link-nav link">SERVICES</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="link-nav link">CONTACT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="link-nav link">PORTAL</a>
+                                <a href="#attitude" class="link-nav link">ATTITUDE</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="contact">
-                        <div class="contact-inner"><span>Let's be friends</span></div>
+                        <div class="contact-inner"><span>Contact To Me</span></div>
                         <div class="contact-inner">
                             <ul class="contact-list">
                                 <li class="contact-item">
-                                    <a href="mailto:wlsgur0217@naver.com" class="link"><span class="text">wlsgur0217@naver.com</span></a>
+                                    <a href="mailto:wlsgur0217@naver.com" class="link"><span class="text">E-MAIL</span></a>
                                 </li>
                                 <li class="contact-item">
-                                    <a href="" class="link"><span class="text">Instagram</span></a>
-                                </li>
-                                <li class="contact-item">
-                                    <a href="" class="link"><span class="text">LinkedIn</span></a>
+                                    <a href="https://github.com/JustDoItJh" class="link"><span class="text">GITHUB</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -385,7 +357,7 @@
             </div>
             <div class="group-inner2">
                 <div class="copywrite">
-                    @2022 HIGHOPES Design
+                    &copy;2022. JINHYEOK All Right Reserved.
                 </div>
             </div>
         </footer>
@@ -397,6 +369,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script src="./asset/js/common.js"></script>
     <script src="./asset/js/main.js"></script>
 </body>
