@@ -192,6 +192,14 @@ textarea::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
+body {
+  transition: all 1s;
+}
+body.white {
+  background: #fff;
+  color: #131313;
+}
+
 .blind {
   position: absolute;
   width: 1px;
@@ -502,8 +510,6 @@ textarea::-webkit-outer-spin-button {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #fff;
-  color: #131313;
 }
 .sc-description .description-area {
   display: flex;
@@ -533,8 +539,6 @@ textarea::-webkit-outer-spin-button {
 
 .sc-work {
   position: relative;
-  background: #fff;
-  color: #131313;
   width: 100%;
   padding-bottom: 100px;
 }
@@ -674,8 +678,6 @@ textarea::-webkit-outer-spin-button {
 .sc-edu {
   position: relative;
   width: 100%;
-  background: #131313;
-  color: #fff;
   padding: 180px 0;
 }
 .sc-edu .edu-area {
@@ -742,8 +744,6 @@ textarea::-webkit-outer-spin-button {
 
 .sc-service {
   padding: 180px 0;
-  background: #fff;
-  color: #131313;
 }
 .sc-service .service-area {
   position: relative;
@@ -791,8 +791,6 @@ textarea::-webkit-outer-spin-button {
 .sc-attitude {
   position: relative;
   padding: 75px 0 200px;
-  background: #fdfbf4;
-  color: #131313;
   overflow-x: hidden;
 }
 .sc-attitude .text-wrap {
