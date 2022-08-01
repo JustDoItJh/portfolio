@@ -199,6 +199,7 @@ $(function(){
   ScrollTrigger.create({
     trigger:".sc-attitude",
     start:"top 50%",
+    end:"bottom 30%",
     markers: true,
     onEnter:() => {
       $('body').addClass('white')
