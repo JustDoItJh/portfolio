@@ -1,4 +1,7 @@
 $(function(){
+    gsap.registerPlugin(ScrollTrigger);
+
+
     // Mouse Cursor drag
     const circle = $('.cursor').width()/2;
 
@@ -43,6 +46,32 @@ $(function(){
         // link.forEach(b => b.addEventListener('mouseleave', animateit));
         // window.addEventListener('mousemove', editCursor);
   
-  
+    
+    
+        const scrollMotion = document.querySelectorAll('[data-name*="upmotion"]')
+        scrollMotion.forEach(element => {
+
+          yVal = (element.dataset.y) ? element.dataset.y : 0;
+          xVal = (element.dataset.x) ? element.dataset.x : 0;
+          
+          upmotion = gsap.timeline(element);
+
+          upmotion = gsap.from(element,{
+            opacity: 0,
+            yPercent: yVal,
+            xPercent: xVal,
+            duration: 2
+          })
+      
+          // 특정 영역에서 트리거
+          ScrollTrigger.create({
+            trigger: element,
+            start: "top 50%",
+            end: "bottom top",
+            makers: true,
+            animatioin: upmotion,
+            toggleActions: "restart none none reset"
+          })
+        })
 
 })

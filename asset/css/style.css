@@ -193,7 +193,7 @@ textarea::-webkit-outer-spin-button {
 }
 
 body {
-  transition: all 1s;
+  transition: 1s ease;
 }
 body.white {
   background: #fff;
@@ -437,12 +437,13 @@ body.white {
   height: 30px;
   top: 0;
   left: 0;
-  transform: translate(-10%, -10%);
+  transform: translate(-50%, -50%);
+  transform-origin: 100% 100%;
+  transition-property: background, transform;
+  pointer-events: none;
   border-radius: 50%;
   border: 1px solid #d5af31;
-  opacity: 0.3;
   z-index: 999;
-  pointer-events: none;
   transform: scale(1);
 }
 .cursor .cursor-follow {
@@ -474,20 +475,20 @@ body.white {
   line-height: 1.2em;
 }
 .sc-intro .title-wrap .splitting .char {
-  -webkit-animation: slide-in 0.8s cubic-bezier(0.5, 0, 0.5, 1) both;
-          animation: slide-in 0.8s cubic-bezier(0.5, 0, 0.5, 1) both;
+  -webkit-animation: slide-in 0.5s cubic-bezier(0.5, 0, 0.5, 1) both;
+          animation: slide-in 0.5s cubic-bezier(0.5, 0, 0.5, 1) both;
   -webkit-animation-delay: calc(60ms * var(--char-index));
           animation-delay: calc(60ms * var(--char-index));
 }
 @-webkit-keyframes slide-in {
   from {
-    transform: translateY(-1em) rotate(-0.05turn) scale(0.5);
+    transform: translateY(-1em) rotate(turn) scale(0.8);
     opacity: 0;
   }
 }
 @keyframes slide-in {
   from {
-    transform: translateY(-1em) rotate(-0.05turn) scale(0.5);
+    transform: translateY(-1em) rotate(turn) scale(0.8);
     opacity: 0;
   }
 }

@@ -1,7 +1,7 @@
 $(function(){
 
-  Splitting();
-
+  Splitting({});
+  gsap.registerPlugin(ScrollTrigger);
 
   var swiper = new Swiper(".swiperBar", {
       // 하단 스크롤바 생성
@@ -165,8 +165,6 @@ $(function(){
       menu.restart()
     }
 
-    
-
   })
 
 
@@ -194,6 +192,7 @@ $(function(){
     onLeaveBack:() => {
       $('body').addClass('white')
     }
+
   })
 
   ScrollTrigger.create({
@@ -204,48 +203,65 @@ $(function(){
     onEnter:() => {
       $('body').addClass('white')
     },
-    onLeave:() => {
+    onLeaveBack:() => {
       $('body').removeClass('white')
     }
   })
 
-  
-
-  // const change = gsap.timeline({
-  //   default:{
-  //     delay:0.3 // 애니메이션 지연
-  //   },
-  //   ScrollTrigger:{
-  //     trigger:".sc-description",
-  //     start:"top top",
-  //     end:".sc-edu", //
-  //     markers:true,
-  //     scrub:0.5,
-  //     onLeave:() => {
-  //       $('body').removeClass('black')
-  //     }
-  //   }
-  // })
-
-
-  const scrollMotion =document.querySelectorAll('[data-name*="motion"]')
-  scrollMotion.forEach(a => {
-
-    motion = gsap.from(a, {
-      opacity: 1,
-      y: 100,
-      stagger: 0.1
-    })
-
-    // 특정 영역에서 트리거
-    ScrollTrigger.create({
-      trigger: a,
-      start: "top 50%",
-      end: "bottom top",
-      makers: true,
-      animatioin: motion
-    })
+  ScrollTrigger.create({
+    trigger:".footer",
+    start:"top 50%",
+    end:"bottom 30%",
+    markers: true,
+    onEnter:() => {
+      $('body').removeClass('white')
+    },
+    onLeaveBack:() => {
+      $('body').addClass('white')
+    }
   })
 
+
+
+  // sc-description 
+  const motion01 = gsap.timeline();
+
+  ScrollTrigger.create({
+    animation:motion01,
+    trigger:".sc-description",
+    start:"top 50%",
+    end:"bottom top",
+    markers:true,
+    toggleActions:"restart none none reset"
+  })
+  
+  motion01.from('.sc-description .text',{
+    y:100,
+    opacity:0,
+    ease:"back",
+    duration:3
+  })
+  
+
+
+  const tl = gsap.timeline();
+
+  ScrollTrigger.create({
+    animation: tl,
+    trigger:".sc-work",
+    start:"top 50%",
+    end:"bottom top",
+    markers:true,
+    toggleActions:"restart none none reset"
+  });
+  
+  tl.from('.sc-work .link-work', {
+    y: 200,
+    opacity:0,
+    ease:"back",
+    duration: 3,
+  })
+  // stagger로 순차적으로 하나씩 올릴수있음.
+  
 })
 

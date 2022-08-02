@@ -22,13 +22,13 @@
             
         }
         .splitting .char {
-            animation: slide-in 0.8s cubic-bezier(.5, 0, .5, 1) both;
+            animation: slide-in 0.5s cubic-bezier(.5, 0, .5, 1) both;
             animation-delay: calc(60ms * var(--char-index));
           }
           
           @keyframes slide-in {
             from {
-              transform: translateY(-1em) rotate(-.05turn) scale(0.5);
+              transform: translateY(-1em) rotate(turn) scale(0.8);
               opacity: 0;
             }
           }
