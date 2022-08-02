@@ -304,9 +304,6 @@ body.white {
   background: #d5af31;
   transition: all 0.3s;
 }
-.head .menu {
-  color: #000;
-}
 .head .menu-area {
   position: fixed;
   top: 0;

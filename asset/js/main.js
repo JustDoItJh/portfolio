@@ -3,13 +3,14 @@ $(function(){
   Splitting({});
   gsap.registerPlugin(ScrollTrigger);
 
+
+  // sc-attitude 스크롤바 swiper
   var swiper = new Swiper(".swiperBar", {
       // 하단 스크롤바 생성
       scrollbar: {
         el: ".swiper-scrollbar",
         hide: true,
       },
-
       // 동시 다중 슬라이드 중앙정렬
       slidesPerView: 1.5,
       centeredSlides: false,
@@ -22,23 +23,9 @@ $(function(){
 
   });
 
-  var swiper = new Swiper(".swiperFade", {
-    // 슬라이드 효과
-    spaceBetween: 100,
-    loop: true,
-    effect: "fade",
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
 
 
-
+  // sc-edu chart.js 
   const dataSample = { // 차트에 들어갈 데이터
     labels: [
         'HTML','CSS','JS','작업 속도','웹 접근성','GSAP','GITHUB'
@@ -71,8 +58,6 @@ $(function(){
         },
     ]
   }
-
-
 
   var context = document
   .getElementById('myChart')
@@ -122,8 +107,6 @@ $(function(){
     },
   });
 
-
-
   dataArr = [
     [30,25,10,10,20,0,0], // data-edu 0
     [60,50,30,50,40,10,30], // data-edu 1
@@ -143,7 +126,7 @@ $(function(){
 
 
 
-
+  // Menu Area
   const menu = gsap.timeline({  // 시간 순서대로 하나씩 이벤트 발생
     paused:true, // 시작부터 일시정지
   })
@@ -157,6 +140,7 @@ $(function(){
   $('.btn-menu').click(function(){
 
     if($('.head .btn-menu').text() == 'CLOSE'){
+      gsap.set('.head .menu-area', {display:'none'}) // 메뉴 영역을 닫고나서 opacity 0만 적용되서 다른 영역 터치가 안됐었다.
       $('.head .btn-menu').text('MENU')
       menu.reverse()
     } else {
@@ -192,7 +176,6 @@ $(function(){
     onLeaveBack:() => {
       $('body').addClass('white')
     }
-
   })
 
   ScrollTrigger.create({
@@ -244,24 +227,53 @@ $(function(){
   
 
 
-  const tl = gsap.timeline();
+  // const tl = gsap.timeline();
 
-  ScrollTrigger.create({
-    animation: tl,
-    trigger:".sc-work",
-    start:"top 50%",
-    end:"bottom top",
-    markers:true,
-    toggleActions:"restart none none reset"
+  // ScrollTrigger.create({
+  //   animation: tl,
+  //   trigger:".sc-work",
+  //   start:"top 50%",
+  //   end:"bottom top",
+  //   markers:true,
+  //   toggleActions:"restart none none reset",
+  // });
+  
+  // tl.from('.sc-work .link-work', {
+  //   stagger:0.5, // stagger로 순차적으로 하나씩 올릴수있음.
+  //   y: 200,
+  //   opacity:0,
+  //   ease:"back",
+  //   duration: 3,
+  // })
+  
+  
+
+  const scrollMotion = document.querySelectorAll('.group-flex')
+  scrollMotion.forEach((element, index) => {
+
+    
+    const motion = gsap.timeline();
+
+    
+    // 특정 영역에서 트리거
+    ScrollTrigger.create({
+      trigger: '.sc-work',
+      start: "top 20%",
+      end: "bottom top",
+      makers: true,
+      animation: motion,
+      toggleActions: "restart none none reset"
+    });
+
+    motion.from(element,{
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      ease:"back",
+      stagger:0.2,
+      
+    }, index + 1)
   });
-  
-  tl.from('.sc-work .link-work', {
-    y: 200,
-    opacity:0,
-    ease:"back",
-    duration: 3,
-  })
-  // stagger로 순차적으로 하나씩 올릴수있음.
-  
+
 })
 
