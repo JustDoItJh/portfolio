@@ -59,9 +59,12 @@
         <main class="main" role="main">
             <!-- Intro -->
             <section class="sc-intro">
+                <!-- Intro Head Area -->
                 <div class="title-wrap">
                     <h2 class="title" data-splitting>TAKE IT TO <br> THE NEXT LEVEL <br> WEB PUBLISHER</h2>
                 </div>
+
+                <!-- background image -->
                 <div class="drag-area">
                     <figure class="image-wrap" role="figure">
                         <span class="blind">배경 이미지</span>
@@ -76,12 +79,14 @@
                     <div class="description-inner">
                         <p class="text">
                             퍼블리셔로서, 기본기와 스킬을 겸비하고 <br>
-                            <a href="#none" class="link-color">부족한 점을 끊임없이 노력으로 채우며</a> <br>
+                            <i class="link-color">부족한 점을 끊임없이 노력으로 채우며</i> <br>
                             믿을 수 있는 웹 퍼블리셔가 되길 지향합니다.
                         </p>
                     </div>
+
+                    <!-- Click Down Button -->
                     <div class="description-inner">
-                        <a href="" class="link-line">
+                        <a href="#none" class="link-line clickdown">
                             <span>SEE MY WORK</span>
                         </a>
                     </div>
@@ -92,9 +97,12 @@
             <section class="sc-work" id="work">
                 <h2 class="title line">My Projects</h2>
                 <div class="work-area">
+
+                    <!-- Group column left -->
                     <div class="col-inner col-left">
-                        <!-- 작업물1 -->
-                        <article class="group-flex" data-name="motion">
+
+                        <!-- 작업물 Nivea -->
+                        <article class="group-flex">
                             <figure class="link-work"> 
                                 <img src="./asset/images/nivea.JPG" alt="니베아 작업물">
                                 <div class="overlay">
@@ -114,8 +122,8 @@
                             </figure>
                         </article>
 
-
-                        <article class="group-flex" data-name="motion">
+                        <!-- 작업물 Naver -->
+                        <article class="group-flex">
                             <figure class="link-work">
                                 <img src="./asset/images/work_naver1.png" alt="네이버 작업">
                                 <div class="overlay">
@@ -137,8 +145,10 @@
 
                     </div>
 
-
+                    <!-- Group column right -->
                     <div class="col-inner col-right">
+
+                        <!-- Text Area -->
                         <article class="group-flex">
                             <div class="work-info">
                                 <p class="text">
@@ -149,6 +159,8 @@
                                 </p>
                             </div>
                         </article>
+
+                        <!-- 작업물 Airpods(2세대) -->
                         <article class="group-flex">
                             <figure class="link-work">
                                 <img src="./asset/images/airpods.jpg" alt="에어팟 2세대 작업물">
@@ -168,6 +180,8 @@
                                 </div>
                             </figure>
                         </article>
+
+                        <!-- 작업물 Naver Webtoon -->
                         <article class="group-flex">
                             <figure class="link-work">
                                 <img src="./asset/images/work_webtoon.png" alt="웹툰 작업물">
@@ -188,7 +202,6 @@
                             </figure>
                         </article>
 
-
                     </div>
                 </div>
             </section>
@@ -197,6 +210,8 @@
             <section class="sc-edu" id="edu"> <!-- 배경색 전환 black -->
                 <h2 class="blind">교육과정</h2>
                 <div class="edu-area">
+
+                    <!-- Education introduction -->
                     <div class="text-wrap">
                         <p class="text">
                             호기심으로 시작된 처음 <br>
@@ -208,13 +223,13 @@
                     <!-- Button Sort -->
                     <div class="edu-wrap" role="tablist">
                         <ul>
-                            <li>
+                            <li role="tablist">
                                 <a href="" data-edu="0" role="tab" class="active">교육 전</a>
                             </li>
-                            <li>
+                            <li role="tablist">
                                 <a href="" data-edu="1" role="tab">국비학원 수료</a>
                             </li>
-                            <li>
+                            <li role="tablist">
                                 <a href="" data-edu="2" role="tab">사설학원 수료</a>
                             </li>
                         </ul>
@@ -222,7 +237,7 @@
 
                     <!-- 눈으로 보는 성장 차트 -->
                     <div class="chart-area">
-                        <canvas id="myChart"></canvas>
+                        <canvas id="myChart" role="tabpanel"></canvas>
                     </div>
                 </div>
             </section>
@@ -230,18 +245,22 @@
             <!-- My Attitude -->
             <section class="sc-attitude" id="attitude">
                 <h2 class="blind">퍼블리셔로서 가져야 할 자세</h2>
+
+                <!-- Attitude Head Area -->
                 <div class="text-wrap">
                     <p class="text">
-                        <em>Attitude</em> 
+                        <em role="heading">Attitude</em> 
                         좋은 퍼블리셔가 되기 위한 자기 자신과의 약속 5가지
                     </p>
                 </div>
+                <!-- Attitude Body Area -->
                 <div class="attitude-area">
+                    <!-- swiper -->
                     <div class="swiper swiperBar">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="image-wrap">
-                                    <img src="./asset/images/study1.jpg" alt="">
+                                    <img src="./asset/images/study1.jpg" alt="1일 1커밋 슬라이드 이미지">
                                 </div>
                                 <div class="text-wrap">
                                     <strong class="title">1일 1커밋</strong>
@@ -253,7 +272,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="image-wrap">
-                                    <img src="./asset/images/study2.jpg" alt="">
+                                    <img src="./asset/images/study2.jpg" alt="커뮤니케이션 슬라이드 이미지">
                                 </div>
                                 <div class="text-wrap">
                                     <strong class="title">커뮤니케이션</strong>
@@ -265,7 +284,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="image-wrap">
-                                    <img src="./asset/images/study3.jpg" alt="">
+                                    <img src="./asset/images/study3.jpg" alt="웹 접근성 슬라이드 이미지">
                                 </div>
                                 <div class="text-wrap">
                                     <strong class="title">웹 접근성 중시</strong>
@@ -278,7 +297,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="image-wrap">
-                                    <img src="./asset/images/study4.jpg" alt="">
+                                    <img src="./asset/images/study4.jpg" alt="클론코딩 슬라이드 이미지">
                                 </div>
                                 <div class="text-wrap">
                                     <strong class="title">클론코딩</strong>
@@ -290,7 +309,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="image-wrap">
-                                    <img src="./asset/images/study5.jpg" alt="">
+                                    <img src="./asset/images/study5.jpg" alt="배움의 자세 슬라이드 이미지">
                                 </div>
                                 <div class="text-wrap">
                                     <strong class="title">배움의 자세</strong>
@@ -306,11 +325,16 @@
                 </div>
             </section>
         </main>
+
         <!-- footer -->
         <footer class="footer" id="contact">
+
+            <!-- Footer Group1 -->
             <div class="group-inner1">
+
+                <!-- Footer Left Area -->
                 <div class="col-left">
-                    <em class="text">Be Publisher</em>
+                    <em class="text" id="typing">Be Publisher</em>
                     
                     <p class="desc">
                         단단한 기본기와 우수한 스크립트 실력을 쌓은 후, <br>
@@ -318,7 +342,10 @@
                     </p>
                     
                 </div>
+
+                <!-- Footer Right Area -->
                 <div class="col-right">
+                    <!-- Navigation Area -->
                     <nav class="nav-wrap">
                         <ul class="nav-list">
                             <li class="nav-item">
@@ -335,21 +362,25 @@
                             </li>
                         </ul>
                     </nav>
+
+                    <!-- Contact Area -->
                     <div class="contact">
                         <div class="contact-inner"><span>Contact To Me</span></div>
                         <div class="contact-inner">
                             <ul class="contact-list">
                                 <li class="contact-item">
-                                    <a href="mailto:wlsgur0217@naver.com" class="link"><span class="text">E-MAIL</span></a>
+                                    <a href="mailto:wlsgur0217@naver.com" class="link" role="link"><span class="text">E-MAIL</span></a>
                                 </li>
                                 <li class="contact-item">
-                                    <a href="https://github.com/JustDoItJh" class="link"><span class="text">GITHUB</span></a>
+                                    <a href="https://github.com/JustDoItJh/portfolio" class="link" role="link"><span class="text">GITHUB</span></a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Footer Group1 -->
             <div class="group-inner2">
                 <div class="copywrite">
                     &copy;2022. JINHYEOK All Right Reserved.

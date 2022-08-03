@@ -22,17 +22,21 @@ body {
     border-radius: 100px;
     border: 1px solid #d5af31;
     padding: 15px 45px;
-    transition-duration: 0.5s;
+    transition: transform 1s, opacity .3s;
     .overlay & {
         padding: 10px 30px;
         border-radius: 5px;
     }
-
-    &:hover {
-        border: 1px solid #131313;
+    
+    &:hover {background: #d5af31; color: #fff; }
+    .description-inner &:hover {
+        display: block;
+        border-radius: 100%;
+        width: 50px; height: 50px;
+        padding: 0;
+        transform: scale(1.5);
+        span {line-height: 50px;}
     }
-    .overlay &:hover {background: #d5af31;}
-    .footer &:hover {background: #d5af31;}
 }
 
 .link {

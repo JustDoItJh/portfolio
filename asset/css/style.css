@@ -217,20 +217,26 @@ body.white {
   border-radius: 100px;
   border: 1px solid #d5af31;
   padding: 15px 45px;
-  transition-duration: 0.5s;
+  transition: transform 1s, opacity 0.3s;
 }
 .overlay .link-line {
   padding: 10px 30px;
   border-radius: 5px;
 }
 .link-line:hover {
-  border: 1px solid #131313;
-}
-.overlay .link-line:hover {
   background: #d5af31;
+  color: #fff;
 }
-.footer .link-line:hover {
-  background: #d5af31;
+.description-inner .link-line:hover {
+  display: block;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  transform: scale(1.5);
+}
+.description-inner .link-line:hover span {
+  line-height: 50px;
 }
 
 .link {
@@ -378,6 +384,45 @@ body.white {
   width: 100%;
   background: #d5af31;
 }
+.footer .group-inner1 .col-left #typing {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.3em;
+  letter-spacing: 4px;
+  white-space: nowrap;
+  text-shadow: 4px 4px 4px rgba(250, 250, 250, 0.3);
+}
+.footer .group-inner1 .col-left #caret {
+  display: inline-block;
+  -webkit-animation-name: cursor;
+          animation-name: cursor;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes cursor {
+  from {
+    border-bottom: 30px solid #fff;
+  }
+  50% {
+    border-bottom: 30px solid #272727;
+  }
+  to {
+    border-bottom: 30px solid #fff;
+  }
+}
+@keyframes cursor {
+  from {
+    border-bottom: 30px solid #fff;
+  }
+  50% {
+    border-bottom: 30px solid #272727;
+  }
+  to {
+    border-bottom: 30px solid #fff;
+  }
+}
 .footer .group-inner1 .col-left .desc {
   font-size: 21px;
   font-weight: 400;
@@ -518,6 +563,7 @@ body.white {
   margin: 0 auto;
   padding: 150px 0 150px;
   text-align: center;
+  height: 100vh;
 }
 .sc-description .description-area .description-inner {
   max-width: 750px;

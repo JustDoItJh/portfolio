@@ -157,7 +157,7 @@ $(function(){
   ScrollTrigger.create({
     trigger:".sc-description",
     start:"top 50%",
-    markers: true,
+    // markers: true,
     onEnter:() => {
       $('body').addClass('white')
     },
@@ -169,7 +169,7 @@ $(function(){
   ScrollTrigger.create({
     trigger:".sc-edu",
     start:"top 50%",
-    markers: true,
+    // markers: true,
     onEnter:() => {
       $('body').removeClass('white')
     },
@@ -182,7 +182,7 @@ $(function(){
     trigger:".sc-attitude",
     start:"top 50%",
     end:"bottom 30%",
-    markers: true,
+    // markers: true,
     onEnter:() => {
       $('body').addClass('white')
     },
@@ -195,7 +195,7 @@ $(function(){
     trigger:".footer",
     start:"top 50%",
     end:"bottom 30%",
-    markers: true,
+    // markers: true,
     onEnter:() => {
       $('body').removeClass('white')
     },
@@ -204,17 +204,17 @@ $(function(){
     }
   })
 
-
-
+  
+  
   // sc-description 
   const motion01 = gsap.timeline();
-
+  
   ScrollTrigger.create({
     animation:motion01,
     trigger:".sc-description",
     start:"top 50%",
     end:"bottom top",
-    markers:true,
+    // markers:true,
     toggleActions:"restart none none reset"
   })
   
@@ -225,55 +225,64 @@ $(function(){
     duration:3
   })
   
+  // sc-description down button
+  $('.clickdown')
+    .mouseenter(function(){$(this).find('span').text('↓');})
+    .mouseleave(function(){$(this).find('span').text('SEE MY WORK');})
 
+  $('.clickdown').click(function(){
+    $('html, body').animate({
+      scrollTop: $('.sc-work').offset().top
+    }, 'slow');
+  })
 
-  const tl = gsap.timeline();
+  // sc-work
+  const motion02 = gsap.timeline();
 
   ScrollTrigger.create({
-    animation: tl,
+    animation: motion02,
     trigger:".sc-work",
-    start:"top 50%",
+    start:"top bottom",
     end:"bottom top",
-    markers:true,
+    // markers:true,
     toggleActions:"restart none none reset",
   });
   
-  tl.from('.sc-work .group-flex', {
+  motion02.from('.sc-work .title', {
+    x: -100,
+    opacity:0,
+    ease:"back",
+    duration: 2,
+  })
+  motion02.from('.sc-work .group-flex', {
     stagger:0.5, // stagger로 순차적으로 하나씩 올릴수있음.
-    y: 200,
+    y: 100,
+    opacity:0,
+    ease:"back",
+    duration: 2,
+  })
+
+  
+  // sc-attitude
+  const motion03 = gsap.timeline();
+
+  ScrollTrigger.create({
+    animation: motion03,
+    trigger:".sc-attitude",
+    start:"top bottom",
+    end:"bottom top",
+    // markers:true,
+    toggleActions:"restart none none reset",
+  });
+  
+  motion03.from('.sc-attitude .text', {
+    x: -200,
     opacity:0,
     ease:"back",
     duration: 3,
   })
-  
-  
 
-//   const scrollMotion = document.querySelectorAll('.group-flex')
-//   scrollMotion.forEach((element, index) => {
-
-    
-//     const motion = gsap.timeline();
-
-    
-//     // 특정 영역에서 트리거
-//     ScrollTrigger.create({
-//       trigger: '.sc-work',
-//       start: "top 20%",
-//       end: "bottom top",
-//       makers: true,
-//       animation: motion,
-//       toggleActions: "restart none none reset"
-//     });
-
-//     motion.from(element,{
-//       opacity: 0,
-//       y: 100,
-//       duration: 1,
-//       ease:"back",
-//       stagger:0.2,
-      
-//     }, index + 1)
-//   });
 
 })
+
 

@@ -33,6 +33,30 @@
                     background: #d5af31;
                 }
             }
+
+            #typing {
+                font-size: 72px;
+                font-weight: 800;
+                line-height: 1.3em;
+                letter-spacing: 4px;
+                white-space: nowrap;
+                text-shadow: 4px 4px 4px rgba(250, 250, 250, 0.3);
+            }
+    
+            #caret {  
+                display: inline-block; 
+                animation-name: cursor; 
+                animation-duration: 0.3s; 
+                animation-iteration-count: infinite; 
+            } 
+    
+            @keyframes cursor {
+    
+            from {border-bottom: 30px solid #fff} 
+            50% {border-bottom: 30px solid #272727} 
+            to {border-bottom: 30px solid #fff} 
+    
+            }
             
             .desc {
                 font-size: 21px;
