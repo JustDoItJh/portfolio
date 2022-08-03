@@ -23,6 +23,7 @@ $(function(){
     });
 
 
+    // 텍스트 typing 효과
     $(function () {
             
         var $typing = $("#typing");
