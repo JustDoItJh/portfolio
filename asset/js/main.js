@@ -227,53 +227,53 @@ $(function(){
   
 
 
-  // const tl = gsap.timeline();
+  const tl = gsap.timeline();
 
-  // ScrollTrigger.create({
-  //   animation: tl,
-  //   trigger:".sc-work",
-  //   start:"top 50%",
-  //   end:"bottom top",
-  //   markers:true,
-  //   toggleActions:"restart none none reset",
-  // });
-  
-  // tl.from('.sc-work .link-work', {
-  //   stagger:0.5, // stagger로 순차적으로 하나씩 올릴수있음.
-  //   y: 200,
-  //   opacity:0,
-  //   ease:"back",
-  //   duration: 3,
-  // })
-  
-  
-
-  const scrollMotion = document.querySelectorAll('.group-flex')
-  scrollMotion.forEach((element, index) => {
-
-    
-    const motion = gsap.timeline();
-
-    
-    // 특정 영역에서 트리거
-    ScrollTrigger.create({
-      trigger: '.sc-work',
-      start: "top 20%",
-      end: "bottom top",
-      makers: true,
-      animation: motion,
-      toggleActions: "restart none none reset"
-    });
-
-    motion.from(element,{
-      opacity: 0,
-      y: 100,
-      duration: 1,
-      ease:"back",
-      stagger:0.2,
-      
-    }, index + 1)
+  ScrollTrigger.create({
+    animation: tl,
+    trigger:".sc-work",
+    start:"top 50%",
+    end:"bottom top",
+    markers:true,
+    toggleActions:"restart none none reset",
   });
+  
+  tl.from('.sc-work .group-flex', {
+    stagger:0.5, // stagger로 순차적으로 하나씩 올릴수있음.
+    y: 200,
+    opacity:0,
+    ease:"back",
+    duration: 3,
+  })
+  
+  
+
+//   const scrollMotion = document.querySelectorAll('.group-flex')
+//   scrollMotion.forEach((element, index) => {
+
+    
+//     const motion = gsap.timeline();
+
+    
+//     // 특정 영역에서 트리거
+//     ScrollTrigger.create({
+//       trigger: '.sc-work',
+//       start: "top 20%",
+//       end: "bottom top",
+//       makers: true,
+//       animation: motion,
+//       toggleActions: "restart none none reset"
+//     });
+
+//     motion.from(element,{
+//       opacity: 0,
+//       y: 100,
+//       duration: 1,
+//       ease:"back",
+//       stagger:0.2,
+      
+//     }, index + 1)
+//   });
 
 })
 

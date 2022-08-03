@@ -1,22 +1,36 @@
 // Mouse Cursor drag
 .cursor {
     position: fixed;
-    width: 30px; height: 30px;
+    width: 50px; height: 50px;
     top: 0; left: 0;
-    transform: translate(-50%, -50%);
     transform-origin: 100% 100%;
-    transition-property: background, transform;
     pointer-events: none;
     border-radius: 50%;
-    border: 1px solid #d5af31;
+    // border: 1px solid #6532cd;
+    mix-blend-mode: difference;
+    background: #fff;
     z-index: 999;
     transform: scale(1);
     
-
-    .cursor-follow {
-        display: none;
-        &:hover {
-            display: block;
-        }
+    &.hover {
+        transform: scale(3);
     }
 }
+
+// .cursor {
+//     width: 3rem; height: 3rem;
+//     position: absolute;
+//     border-radius: 50%;
+//     transform: translate(-50%, -50%);
+//     pointer-events: none;
+//     transition-property: background, transform;
+//     transform-origin: 100% 100%;
+//     // border: 1px solid #6532cd;
+//     mix-blend-mode: difference;
+    
+//     background: #fff;
+//     z-index: 999;
+//     &.link-grow {
+//         transform: scale(2);
+//     }
+// }

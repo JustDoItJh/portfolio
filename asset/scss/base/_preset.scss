@@ -1,5 +1,6 @@
 body {
     transition: 1s ease;
+    min-width: 1400px;
     &.white {
         background: #fff; color: #131313;
     }
