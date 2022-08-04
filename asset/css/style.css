@@ -392,37 +392,6 @@ body.white {
   white-space: nowrap;
   text-shadow: 4px 4px 4px rgba(250, 250, 250, 0.3);
 }
-.footer .group-inner1 .col-left #caret {
-  display: inline-block;
-  -webkit-animation-name: cursor;
-          animation-name: cursor;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-@-webkit-keyframes cursor {
-  from {
-    border-bottom: 30px solid #fff;
-  }
-  50% {
-    border-bottom: 30px solid #272727;
-  }
-  to {
-    border-bottom: 30px solid #fff;
-  }
-}
-@keyframes cursor {
-  from {
-    border-bottom: 30px solid #fff;
-  }
-  50% {
-    border-bottom: 30px solid #272727;
-  }
-  to {
-    border-bottom: 30px solid #fff;
-  }
-}
 .footer .group-inner1 .col-left .desc {
   font-size: 21px;
   font-weight: 400;
