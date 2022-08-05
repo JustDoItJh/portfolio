@@ -110,7 +110,7 @@ $(function(){
   dataArr = [
     [30,25,10,10,20,0,0], // data-edu 0
     [60,50,30,50,40,10,30], // data-edu 1
-    [90,75,50,75,70,60,60]  // data-edu 2
+    [90,75,55,70,70,60,60]  // data-edu 2
   ]
 
   $('.edu-area a').click(function(e){
@@ -242,8 +242,8 @@ $(function(){
   ScrollTrigger.create({
     animation: motion02,
     trigger:".sc-work",
-    start:"top bottom",
-    end:"bottom top",
+    start:"top 50%",
+    end:"bottom bottom",
     // markers:true,
     toggleActions:"restart none none reset",
   });
@@ -251,15 +251,14 @@ $(function(){
   motion02.from('.sc-work .title', {
     x: -100,
     opacity:0,
-    ease:"back",
-    duration: 2,
+    duration: 1,
   })
   motion02.from('.sc-work .group-flex', {
-    stagger:0.5, // stagger로 순차적으로 하나씩 올릴수있음.
+    stagger:0.1, // stagger로 순차적으로 하나씩 올릴수있음.
     y: 100,
     opacity:0,
     ease:"back",
-    duration: 2,
+    duration: 1,
   })
 
   
