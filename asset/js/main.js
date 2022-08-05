@@ -110,7 +110,7 @@ $(function(){
   dataArr = [
     [30,25,10,10,20,0,0], // data-edu 0
     [60,50,30,50,40,10,30], // data-edu 1
-    [90,85,65,70,70,60,70]  // data-edu 2
+    [90,75,50,75,70,60,60]  // data-edu 2
   ]
 
   $('.edu-area a').click(function(e){
