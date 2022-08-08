@@ -226,9 +226,6 @@ $(function(){
   })
   
   // sc-description down button
-  $('.clickdown')
-    .mouseenter(function(){$(this).find('span').text('↓');})
-    .mouseleave(function(){$(this).find('span').text('SEE MY WORK');})
 
   $('.clickdown').click(function(){
     $('html, body').animate({
