@@ -23,7 +23,7 @@ $(function(){
 
   });
 
-
+                              
 
   // sc-edu chart.js 
   const dataSample = { // 차트에 들어갈 데이터
