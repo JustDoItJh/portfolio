@@ -1,7 +1,7 @@
 $(function(){
 
-  Splitting({});
-  gsap.registerPlugin(ScrollTrigger);
+  Splitting({}); // text effect
+  gsap.registerPlugin(ScrollTrigger); // gsap scrolltrigger
 
 
   // sc-attitude 스크롤바 swiper
